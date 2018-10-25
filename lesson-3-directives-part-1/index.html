@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app-vue">
+      <div>
+        <h4>v-if // v-else</h4>
+
+        <div v-if="ifBoolean">
+          show information via v-if
+        </div>
+      </div>
+
+      <div>
+        <h4>v-show</h4>
+
+        <div v-show="showBoolean">
+          show information via v-show
+        </div>
+      </div>
+
+      <div>
+        <h4>v-for</h4>
+        <ul>
+          <li v-for="fruit in fruits">
+            {{ fruit }}
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
