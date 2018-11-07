@@ -1,0 +1,20 @@
+#app-vue {
+  display: flex;
+  justify-content: center;
+}
+
+.fruits {
+  width: 300px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: #FFEEE4;
+}
+
+li {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
