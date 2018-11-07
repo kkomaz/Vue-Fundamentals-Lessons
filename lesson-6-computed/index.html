@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Directives Lesson 6 - Computed</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+  <body>
+    <div id="app-vue">
+      <div class="container">
+        <div class="button-container">
+          <h4>Sort Stores by:</h4>
+          <button
+            class="btn btn-primary"
+            @click="sortName"
+          >
+            Store Name
+          </button>
+
+          <button
+            class="btn btn-warning"
+            @click="sortLowest"
+          >
+            Lowest Stars
+          </button>
+
+          <button
+            class="btn btn-warning"
+            @click="sortHighest"
+          >
+            Highest Stars
+          </button>
+        </div>
+
+        <div>
+          <h4>Search Stores by Text:</h4>
+
+          <input type="text" v-model="searchText">
+        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th v-for="column in columns">
+                {{ column }}
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="store in searchedStores">
+              <td v-for="column in columns">
+                {{ store[column] }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
